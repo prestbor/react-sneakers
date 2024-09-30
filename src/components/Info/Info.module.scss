@@ -1,0 +1,67 @@
+.emptyCart {
+  // margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .cartImg {
+    width: 120px;
+    // height: 120px;
+    margin-bottom: 21px;
+  }
+
+  .cartHeader {
+    margin-bottom: 9px;
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  .cartDesc {
+    max-width: 285px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    opacity: 40%;
+  }
+}
+
+.greenButton {
+  position: relative;
+  width: 245px;
+  height: 55px;
+  background: #9dd558;
+  border-radius: 18px;
+  border: 0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.1s ease-in-out;
+
+  .greenBtnBackArrow {
+    width: 13px;
+    height: 12px;
+    position: absolute;
+    left: 31px;
+    top: 22px;
+    transition: transform 0.15s ease-in-out;
+  }
+
+  &:hover {
+    background: lighten($color: #9dd558, $amount: 5%);
+
+    img {
+      transform: translateX(-5px);
+    }
+  }
+
+  &:active {
+    background: darken($color: #9dd558, $amount: 5%);
+  }
+}
