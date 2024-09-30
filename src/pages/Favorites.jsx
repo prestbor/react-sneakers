@@ -1,18 +1,8 @@
-import { useLocation } from "react-router-dom";
-import Card from "../components/Card/Card";
 import AppContext from "../components/Contexts/AppContext";
 
-import { nanoid } from "@reduxjs/toolkit";
 import { useContext, useState } from "react";
 
-function Favorites({
-  searchValue,
-  setSearchValue,
-  onChangeSearchInput,
-  onAddToCart,
-  onAddToFavorites,
-  loading,
-}) {
+function Favorites({ searchValue, setSearchValue, onChangeSearchInput }) {
   const { favorites, isItemAdded, renderItems } = useContext(AppContext);
 
   return (

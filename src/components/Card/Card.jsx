@@ -1,7 +1,6 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import ContentLoader from "react-content-loader";
 import styles from "./Card.module.scss";
-import AppContext from "../Contexts/AppContext";
 
 function Card({
   gId,
@@ -20,12 +19,10 @@ function Card({
 
   const onClickPlus = () => {
     onPlus({ gId, title, price, imageUrl });
-    // setIsAdded(!isAdded);
   };
 
   const onClickFavorite = () => {
     onFavorite({ gId, id, title, price, imageUrl });
-    // setIsFavorite(!isFavorite);
   };
 
   return (

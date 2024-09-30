@@ -2,18 +2,14 @@ import { Outlet, Route, Routes } from "react-router-dom";
 import Drawer from "./components/Drawer/Drawer";
 import Header from "./components/Header/Header";
 import Home from "./pages/Home";
-import { createContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { nanoid } from "@reduxjs/toolkit";
 import axios from "axios";
 import Card from "./components/Card/Card";
 import Favorites from "./pages/Favorites";
 import AppContext from "./components/Contexts/AppContext";
 import Orders from "./pages/Orders/Orders";
-import {
-  disableBodyScroll,
-  enableBodyScroll,
-  clearAllBodyScrollLocks,
-} from "body-scroll-lock";
+import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
 function App() {
   const [items, setItems] = useState([]);
@@ -25,7 +21,6 @@ function App() {
   const totalPrice = cartItems.reduce((sum, obj) => sum + obj.price, 0);
 
   useEffect(() => {
-    // setIsLoading(true);
     axios
       .get("https://66bdcf0174dfc195586daeca.mockapi.io/items")
       .then((res) => {
@@ -43,27 +38,6 @@ function App() {
       });
     setIsLoading(false);
   }, []);
-
-  // useEffect(() => {
-  //   async function fetchData() {
-  //     try {
-  //       const [cartResponse, favoritesResponse, itemResponse] =
-  //         await Promise.all([
-  //           axios.get("https://66bdcf0174dfc195586daeca.mockapi.io/cart"),
-  //           axios.get("https://66c8bd008a477f50dc2f2150.mockapi.io/favorites"),
-  //           axios.get("https://66bdcf0174dfc195586daeca.mockapi.io/items"),
-  //         ]);
-
-  //       // setIsLoading(false);
-  //       setCartItems(cartResponse.data);
-  //       setFavorites(favoritesResponse.data);
-  //       setItems(itemResponse.data);
-  //     } catch (error) {
-  //       alert("Ошибка при запросе данных");
-  //       console.log(error);
-  //     }
-  //   }
-  // });
 
   const onAddToCart = async (obj) => {
     try {
@@ -108,7 +82,6 @@ function App() {
         );
         setFavorites((prev) => prev.filter((item) => item.gId !== obj.gId));
         setFavorites((prev) => [...prev, data]);
-        // setFavorites((prev) => [...prev, obj]);
       }
     } catch (error) {
       alert("Не удалось добавить в фавориты");
@@ -203,7 +176,6 @@ function App() {
             path="/favorites"
             element={
               <Favorites
-                // items={favorites}
                 searchValue={searchValue}
                 setSearchValue={setSearchValue}
                 onChangeSearchInput={onChangeSearchInput}

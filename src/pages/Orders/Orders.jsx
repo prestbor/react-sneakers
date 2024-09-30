@@ -1,20 +1,10 @@
-import { useLocation } from "react-router-dom";
-import Card from "../../components/Card/Card";
 import AppContext from "../../components/Contexts/AppContext";
 import styles from "./Orders.module.scss";
 
-import { nanoid } from "@reduxjs/toolkit";
 import { useContext, useEffect, useState } from "react";
-import { useLayoutEffect } from "react";
 import axios from "axios";
 
-function Orders({
-  searchValue,
-  setSearchValue,
-  onChangeSearchInput,
-  onAddToCart,
-  onAddToFavorites,
-}) {
+function Orders({ searchValue, setSearchValue, onChangeSearchInput }) {
   const { favorites, isItemAdded, isItemFavorited, renderItems } =
     useContext(AppContext);
   const [orders, setOrders] = useState([]);
