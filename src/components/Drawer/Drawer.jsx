@@ -47,7 +47,7 @@ function Drawer({ items = [], onClose, onRemove, opened }) {
           <img
             onClick={onClose}
             className={styles.removeBtn}
-            src="/img/btn-remove.svg"
+            src="img/btn-remove.svg"
             alt="Remove"
           />
         </h2>
@@ -75,7 +75,7 @@ function Drawer({ items = [], onClose, onRemove, opened }) {
                       onRemove(obj.id);
                     }}
                     className={styles.removeBtn}
-                    src="/img/btn-remove.svg"
+                    src="img/btn-remove.svg"
                     alt="Remove"
                   />
                 </div>
@@ -102,7 +102,7 @@ function Drawer({ items = [], onClose, onRemove, opened }) {
                 className={styles.greenButton}
               >
                 Оформить заказ
-                <img src="/img/arrow.svg" alt="Arrow" />
+                <img src="img/arrow.svg" alt="Arrow" />
               </button>
             </div>
           </div>
