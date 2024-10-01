@@ -1,7 +1,7 @@
 {
   "name": "store-sneakers",
   "version": "0.1.0",
-  "homepage": "https://prestbor.github.io/react-sneakers",
+  "homepage": "https://prestbor.github.io",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.7",
