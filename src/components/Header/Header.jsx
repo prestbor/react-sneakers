@@ -11,9 +11,9 @@ function Header({ onClickCart }) {
 
   return (
     <header className="d-flex justify-between align-center p-40">
-      <Link to="/">
+      <Link to={process.env.PUBLIC_URL + "/"}>
         <div className="d-flex align-center">
-          <img width={40} height={40} src="/img/logo.png" alt="logo" />
+          <img width={40} height={40} src="img/logo.png" alt="logo" />
           <div>
             <h3 className="text-uppercase">React Sneakers</h3>
             <p className="opacity-5">Магазин лучших кроссовок</p>
@@ -56,18 +56,18 @@ function Header({ onClickCart }) {
         </li>
 
         <li className="mr-20 cu-p">
-          <Link to="/favorites">
+          <Link to={process.env.PUBLIC_URL + "/favorites"}>
             <img
               width={18}
               height={18}
-              src="/img/header-favorites.svg"
+              src="img/header-favorites.svg"
               alt="Закладки"
             />
           </Link>
         </li>
 
         <li>
-          <Link to="/orders">
+          <Link to={process.env.PUBLIC_URL + "/orders"}>
             <svg
               className={styles.profileIcon}
               width="18"

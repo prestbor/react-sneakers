@@ -63,7 +63,7 @@ function Drawer({ items = [], onClose, onRemove, opened }) {
                 >
                   <img
                     className={styles.cartItemImg}
-                    src={obj.imageUrl}
+                    src={process.env.PUBLIC_URL + obj.imageUrl}
                     alt="Sneakers"
                   />
                   <div className="mr-20 flex">
@@ -110,9 +110,7 @@ function Drawer({ items = [], onClose, onRemove, opened }) {
           <Info
             title={isOrderComplete ? "Заказ оформлен!" : "Корзина пустая"}
             image={
-              isOrderComplete
-                ? "/img/completed-order.png"
-                : "/img/cart-empty.jpg"
+              isOrderComplete ? "img/completed-order.png" : "img/cart-empty.jpg"
             }
             description={
               isOrderComplete

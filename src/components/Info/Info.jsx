@@ -25,7 +25,7 @@ const Info = ({ title, image, description }) => {
       >
         <img
           className={styles.greenBtnBackArrow}
-          src="/img/arrow-left.svg"
+          src="img/arrow-left.svg"
           alt="Arrow"
         />
         Вернуться назад

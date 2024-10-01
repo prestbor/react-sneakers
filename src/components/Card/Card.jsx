@@ -51,7 +51,12 @@ function Card({
               alt="Unliked"
             />
           </div>
-          <img width={133} height={112} src={imageUrl} alt="Sneakers" />
+          <img
+            width={133}
+            height={112}
+            src={process.env.PUBLIC_URL + imageUrl}
+            alt="Sneakers"
+          />
           <h5>{title}</h5>
           <div className="d-flex justify-between align-center">
             <div className="d-flex flex-column">
